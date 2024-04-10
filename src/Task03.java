@@ -34,6 +34,11 @@ public class Task03 {
 
         Collection<String> names = phonebook.values();
         String nameMax = Collections.max(names, (o1, o2) -> o1.compareTo(o2));
+
+//        System.out.println("==============");
+//        System.out.println(nameMax);
+//        System.out.println("==============");
+
         List<String> namePhones = new ArrayList<>();
         for (var entry : phonebook.entrySet()) {
             if (nameMax.equals(entry.getValue())) {
@@ -44,6 +49,8 @@ public class Task03 {
         for (String namePhone : namePhones) {
             System.out.println(nameMax + " -> " + namePhone);
         }
+
+
 
     }
 }
