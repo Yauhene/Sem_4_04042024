@@ -1,12 +1,11 @@
 package HWork;
 
-import HWork.CreativeUnit.*;
-
 import static HWork.CreativeUnit.*;
 import static HWork.CreativeUnit.findNameByPhone;
 
 public class Start {
     public static void main(String[] args) {
+        System.out.println();
         CreativeUnit unit_1 = new CreativeUnit("Stas", 5); // создаем сотрудника
         addPhone(unit_1, "11111"); // присваиваем ему номера телефонов
         addPhone(unit_1, "11122");

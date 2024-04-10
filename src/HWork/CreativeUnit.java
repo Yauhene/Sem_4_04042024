@@ -5,12 +5,10 @@ import java.util.*;
 public class CreativeUnit {
     private int id; // id сотрудника
     private String name; // имя сотрудника
-    private String phoneNumber; // номер телефона сотрудника
     private int experience; // стаж сотрудника
     private ArrayList<String> phonesList; // список телефонов сотрудника
     static private int maxId = 0; // значение максимального id
     static private Map<Integer, CreativeUnit> mapGeneralList = new HashMap<>(); // мапа сотрудников id -> экземпляр
-    static private Map<Integer, String> mapNameById = new HashMap<>(); // мапа id -> name
     static private Map<String, String> mapNameByPhone = new HashMap<>(); // мапа phoneNumber -> name
     static private Map<String, Integer> mapIdByName = new HashMap<>(); // мапа id по имени
 
@@ -133,71 +131,19 @@ public class CreativeUnit {
         return id;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 
     public int getExperience() {
         return experience;
     }
 
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
-    public ArrayList<String> getPhonesList() {
-        return phonesList;
-    }
-
-    public void setPhonesList(ArrayList<String> phonesList) {
-        this.phonesList = phonesList;
-    }
-
     public static int getMaxId() {
         return maxId;
     }
 
-    public static void setMaxId(int maxId) {
-        CreativeUnit.maxId = maxId;
-    }
-
     public static Map<Integer, CreativeUnit> getMapGeneralList() {
         return mapGeneralList;
-    }
-
-    public static void setMapGeneralList(Map<Integer, CreativeUnit> mapGeneralList) {
-        CreativeUnit.mapGeneralList = mapGeneralList;
-    }
-
-//    public static Map<Integer, Integer> getMapExperienceById() {
-//        return mapExperienceById;
-//    }
-//
-//    public static void setMapExperienceById(Map<Integer, Integer> mapExperienceById) {
-//        CreativeUnit.mapExperienceById = mapExperienceById;
-//    }
-
-    public static Map<Integer, String> getMapNameById() {
-        return mapNameById;
-    }
-
-    public static void setMapNameById(Map<Integer, String> mapNameById) {
-        CreativeUnit.mapNameById = mapNameById;
     }
 }
